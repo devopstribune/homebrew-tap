@@ -13,6 +13,7 @@ class Dt < Formula
   end
 
   test do
-    assert_match "DevOps Tribune CLI", shell_output("#{bin}/dt version")
+    assert_match "dt version", shell_output("#{bin}/dt version")
+    assert_match "DevOps Tribune CLI", shell_output("#{bin}/dt --help")
   end
 end
